@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    
+    <div class="search-bar-container">
+        <input type="text" id="city-input" placeholder="Search city..." class="search-bar-input" onfocus="showSuggestions()" onblur="hideSuggestions()">
+        <button id="search-btn" class="search-bar-btn">
+            <img width="48" height="48" src="https://img.icons8.com/fluency/48/search.png" alt="search"/>
+        </button>
+        <ul id="suggestions-list" class="suggestions-list"></ul>
+    </div>
+    <div class="use-current-location-container">
+        <button id="use-current-location-btn">Use Current Location</button>
+    </div>
+    
+    <div class="container">
+        <div class="current-info">
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30 <span id="am-pm">PM</span>
+                </div>
+                <div class="date" id="date">
+                    Monday, 25 May
+                </div>
+
+                <div class="others" id="current-weather-items">
+                    <div class="weather-item">
+                        <div>Humidity</div>
+                        <div id="humidity">95.2%</div>
+                    </div>
+                    <div class="weather-item">
+                        <div>Pressure</div>
+                        <div id="pressure">1012 hPa</div>
+                    </div>
+                    <div class="weather-item">
+                        <div>Wind Speed</div>
+                        <div id="wind-speed">5.1 m/s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-container">
+                <div class="time-zone" id="time-zone">Asia/Kolkata</div>
+                <div id="country" class="country">IN</div>
+            </div>
+        </div>
+    </div>
+    <div id="loading-indicator" class="loading-spinner" style="display: none;"></div>
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">Monday</div>
+                <div class="temp">Night - <span id="night-temp">25.6</span>&#176; C</div>
+                <div class="temp">Day - <span id="day-temp">35.6</span>&#176; C</div>
+            </div>
+        </div>
+
+        <div class="weather-forecast" id="weather-forecast">
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
