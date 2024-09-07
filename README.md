@@ -1,4 +1,4 @@
-# Weather App
+# Weather Forecasting Web App
 
 ## Project Overview
 This Weather App provides real-time weather information and forecasts for any city you search or your current location. The app fetches data from the OpenWeatherMap API and displays current weather conditions, including temperature, humidity, wind speed, and a 7-day forecast. It is fully responsive, ensuring a seamless experience across different screen sizes.
